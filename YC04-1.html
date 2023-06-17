@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .product-image {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .product-description {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .carousel-container {
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-inner {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .carousel-row {
+      display: flex;
+      padding-left: 30px;
+    }
+
+    .carousel-row .carousel-item {
+      flex: 0 0 calc(33.33% - 10px);
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      transition: border-color 0.3s ease;
+    }
+
+    .carousel-row .carousel-item:first-child {
+      margin-left: 5px;
+    }
+
+    .carousel-row .carousel-item:last-child {
+      margin-right: 5px;
+    }
+
+    .carousel-row .carousel-item img {
+      width: 70px;
+      height: 70px;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .carousel-row .carousel-item.selected {
+      border-color: red;
+    }
+
+    .carousel-control {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .left {
+      left: -5px;
+    }
+
+    .right {
+      margin-right: -35px;
+    }
+
+    .back-arrow{
+      margin-top: 100px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<header></header>
+<body>
+  <div>
+  <a href="Home.html" class="back-arrow"><img src="back.png" alt="back" width="20px" height="20px"></a>
+  </div>
+  <div class="container">
+    <div class="product-image">
+      <img id="mainImage" src="Big piece/Saipan-YC04-1.jpg" alt="Product Image" width="250px">
+    </div>
+  </div>
+  <div class="container carousel-container">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="carousel-row">
+            <div class="carousel-item selected">
+              <img src="Big piece/Saipan-YC04-1.jpg" alt="Small Image 1" onclick="changeProductImage(this)">
+            </div>
+            <div class="carousel-item">
+              <img src="Effect Pic/saipan-YC04-2.jpg" alt="Small Image 2" onclick="changeProductImage(this)">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="product-description">
+    <h1>Product Title</h1>
+    <p>Product description goes here...</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

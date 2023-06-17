@@ -1,0 +1,53 @@
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  }
+  
+  .column {
+    flex-basis: 100%/2;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .product {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+  }
+  
+  p {
+    margin-top: -5px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .banner-container {
+    padding-top: 20px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
